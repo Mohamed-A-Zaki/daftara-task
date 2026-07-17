@@ -18,10 +18,5 @@ export const theme = createTheme({
   },
   primaryColor: "primary",
   defaultRadius: "sm",
-  defaultGradient: {
-    from: "orange",
-    to: "red",
-    deg: 45,
-  },
   fontFamily: FONTS.EN,
 });

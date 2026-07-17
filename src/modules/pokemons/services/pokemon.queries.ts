@@ -4,7 +4,7 @@ import { getPokemon, getPokemons } from "./pokemon.api";
 import { pokemonsKeys } from "./pokemons.keys";
 
 /***
- * Hook to fetch all users with optional filters
+ * Hook to fetch all pokemons with optional filters
  */
 export const useAllPokemonsQuery = (filters?: PokemonFilters) => {
   return useQuery({
@@ -14,7 +14,7 @@ export const useAllPokemonsQuery = (filters?: PokemonFilters) => {
 };
 
 /**
- * Hook to fetch a single user by ID
+ * Hook to fetch a single pokemon by ID
  */
 export const useSinglePokemonQuery = (id: number) => {
   return useQuery({
