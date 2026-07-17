@@ -1,21 +1,20 @@
-import { LIMIT } from "@/shared/configurations/constants";
 import { Pagination } from "@mantine/core";
-import { useState } from "react";
-import { useAllPokemonsQuery } from "../services/pokemon.queries";
+import usePageControlTab from "../hooks/use-page-control-tab";
 import EmptyCard from "./empty-card";
 import ErrorCard from "./error-card";
 import PokemonCard from "./pokemon-card";
 import PokemonListSkeleton from "./pokemon-list-skeleton";
 
 export default function PageControlTab() {
-  const [activePage, setActivePage] = useState(1);
-
-  const { data, isLoading, error, refetch } = useAllPokemonsQuery({
-    limit: LIMIT,
-    offset: (activePage - 1) * LIMIT,
-  });
-
-  const totalPages = data?.count ? Math.ceil(data.count / LIMIT) : 1;
+  const {
+    activePage,
+    error,
+    isLoading,
+    refetch,
+    setActivePage,
+    totalPages,
+    data,
+  } = usePageControlTab();
 
   if (isLoading) {
     return <PokemonListSkeleton />;

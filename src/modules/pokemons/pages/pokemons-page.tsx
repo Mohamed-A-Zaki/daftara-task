@@ -3,8 +3,7 @@ import Helmet from "@mongez/react-helmet";
 import { useState } from "react";
 import InfiniteScrollTab from "../components/infinite-scroll-tab";
 import PageControlTab from "../components/page-control-tab";
-
-type TabKey = "page-control" | "infinite-scroll";
+import type { TabKey } from "../types";
 
 const TABS: { key: TabKey; label: string }[] = [
   { key: "page-control", label: "Page Controls" },
@@ -16,7 +15,7 @@ export default function PokemonsPage() {
 
   return (
     <>
-      <Helmet title="Home Page" />
+      <Helmet title="Pokemon Page" />
 
       <div className="container bg-gray-color p-5 rounded-md border-border-color border my-10">
         <div className="flex flex-col gap-3">

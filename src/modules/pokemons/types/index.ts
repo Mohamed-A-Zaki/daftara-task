@@ -14,3 +14,5 @@ export interface Pokemon {
   name: string;
   url: string;
 }
+
+export type TabKey = "page-control" | "infinite-scroll";

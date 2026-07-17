@@ -1,16 +1,11 @@
 import { Card, Image } from "@mantine/core";
 
-function getPokemonId(url: string) {
-  return url.split("/").filter(Boolean).pop() ?? "";
-}
-
-export default function PokemonCard({
-  name,
-  url,
-}: {
+interface PokemonCardProps {
   name: string;
   url: string;
-}) {
+}
+
+export default function PokemonCard({ name, url }: PokemonCardProps) {
   const id = getPokemonId(url);
 
   return (
@@ -35,4 +30,8 @@ export default function PokemonCard({
       </div>
     </Card>
   );
+}
+
+function getPokemonId(url: string) {
+  return url.split("/").filter(Boolean).pop() ?? "";
 }
