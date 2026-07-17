@@ -1,3 +1,3 @@
 export const apiRoutes = {
-  users: "/users",
+  pokemons: "/pokemon",
 };
