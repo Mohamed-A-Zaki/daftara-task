@@ -9,7 +9,7 @@ import "@/shared/configurations/helmet-configuration";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="daftara-task">
       <App />
     </BrowserRouter>
   </StrictMode>,
