@@ -13,5 +13,5 @@ export default defineConfig({
     react(),
     babel({ presets: [reactCompilerPreset()] }),
   ],
-  base: "/daftara-task",
+  base: "/daftara-task/",
 });
