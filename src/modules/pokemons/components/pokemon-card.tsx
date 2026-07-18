@@ -1,4 +1,6 @@
+import { URLS } from "@/shared/utils/urls";
 import { Card, Image } from "@mantine/core";
+import { Link } from "react-router";
 
 interface PokemonCardProps {
   name: string;
@@ -14,6 +16,8 @@ export default function PokemonCard({ name, url }: PokemonCardProps) {
       radius={5}
       withBorder
       className="flex flex-col gap-3 text-center!"
+      component={Link}
+      to={URLS.pokemonDetailsPath(+id)}
     >
       <div className="bg-gray-color rounded-md">
         <Image
