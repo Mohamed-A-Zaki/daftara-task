@@ -1,75 +1,116 @@
-# React + TypeScript + Vite
+# Pokemon App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React application built with TypeScript, Vite, and cutting-edge frontend technologies. This project demonstrates best practices in React development with a focus on performance, maintainability, and developer experience.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** - Latest React with React Compiler enabled for optimized performance
+- **TypeScript** - Type-safe development
+- **Vite** - Lightning-fast build tool and dev server
+- **Mantine UI** - Comprehensive React component library
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Router** - Declarative routing for React
+- **TanStack React Query** - Powerful data fetching and state management
+- **Axios** - HTTP client for API requests
+- **Mongez** - Utility libraries for DOM manipulation and state management
 
-## React Compiler
+## 📦 Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- ⚡ Fast development with Vite HMR
+- 🎨 Beautiful UI components with Mantine and Tailwind
+- 🔍 Efficient data fetching with React Query
+- 🛣️ Client-side routing with React Router
+- 📱 Responsive design
+- 🧪 Type-safe with TypeScript
+- 🎯 React Compiler for automatic optimizations
+- 🚀 GitHub Pages deployment ready
 
-Note: This will impact Vite dev & build performances.
+## 🛠️ Installation
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+```bash
+# Install dependencies
+yarn install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📜 Available Scripts
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
+```bash
+# Start development server (opens browser automatically)
+yarn dev
 
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+# Update dependencies and start dev server
+yarn start
+
+# Build for production
+yarn build
+
+# Preview production build locally
+yarn preview
+
+# Run ESLint
+yarn lint
+
+# Format code with Prettier
+yarn format
+
+# Update all dependencies
+yarn update
+
+# Serve production build locally
+yarn serve
+
+# Deploy to GitHub Pages
+yarn deploy
 ```
+
+## 📁 Project Structure
+
+```
+src/
+├── modules/           # Feature-based modules
+│   ├── home/         # Home page module
+│   ├── pokemons/     # Pokemon-related features
+│   └── not-found/    # 404 page
+├── shared/           # Shared utilities and configurations
+│   ├── api/          # API configurations and services
+│   ├── configurations/ # App configurations
+│   ├── providers/    # React context providers
+│   ├── routes/       # Route definitions
+│   ├── styles/       # Global styles
+│   └── utils/        # Utility functions
+├── App.tsx           # Root component
+└── main.tsx          # Application entry point
+```
+
+## 🚢 Deployment
+
+This project is configured for GitHub Pages deployment. The `homepage` field in `package.json` is set to deploy to `https://Mohamed-A-Zaki.github.io/daftara-task/`.
+
+To deploy:
+
+```bash
+yarn deploy
+```
+
+## 🔧 Development Tools
+
+- **ESLint** - Code linting with React and TypeScript rules
+- **Prettier** - Code formatting with Tailwind and import organization plugins
+- **Husky** - Git hooks for pre-commit checks
+- **lint-staged** - Run linters on staged files
+
+## 📝 Configuration Files
+
+- `vite.config.ts` - Vite build configuration
+- `tsconfig.json` - TypeScript compiler options
+- `eslint.config.js` - ESLint rules and configuration
+- `.prettierrc` - Prettier formatting rules
+- `postcss.config.cjs` - PostCSS configuration for Tailwind
+
+## 🌐 Live Demo
+
+Visit the live application at: https://Mohamed-A-Zaki.github.io/daftara-task/
+
+## 📄 License
+
+This project is private.
