@@ -15,7 +15,6 @@ export default function usePageControlTab() {
   return {
     isLoading,
     error,
-    LIMIT,
     setActivePage,
     activePage,
     totalPages,

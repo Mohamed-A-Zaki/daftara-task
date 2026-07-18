@@ -2,7 +2,6 @@ import type { TabKey } from "@/modules/pokemons/types";
 
 export const LIMIT = 10;
 
-// pokemon-constants.ts
 export const TYPE_COLORS: Record<string, string> = {
   normal: "gray",
   fire: "red",

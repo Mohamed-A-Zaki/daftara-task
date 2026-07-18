@@ -1,3 +1,12 @@
+import type {
+  QueryObserverResult,
+  RefetchOptions,
+} from "@tanstack/react-query";
+
+export type RefetchFunction = (
+  options?: RefetchOptions,
+) => Promise<QueryObserverResult>;
+
 export interface PokemonFilters {
   limit?: number;
   offset?: number;

@@ -17,7 +17,7 @@ export default function PokemonCard({ name, url }: PokemonCardProps) {
       radius={5}
       withBorder
       component={Link}
-      to={URLS.pokemonDetailsPath(+id)}
+      to={URLS.pokemonDetailsPath(Number(id))}
     >
       <div className="bg-gray-color rounded-md">
         <Image

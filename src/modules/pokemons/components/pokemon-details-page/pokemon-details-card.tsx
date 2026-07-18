@@ -1,7 +1,6 @@
 import MeasurementCard from "@/modules/pokemons/components/pokemon-details-page/measurement-card";
 import StatBar from "@/modules/pokemons/components/pokemon-details-page/stat-bar";
 import { TypeBadges } from "@/modules/pokemons/components/pokemon-details-page/type-badges";
-import type { PokemonDetails } from "@/modules/pokemons/types";
 import {
   HEIGHT_TO_METERS,
   WEIGHT_TO_KG,
@@ -15,20 +14,35 @@ import {
   Grid,
   Group,
   Image,
+  Skeleton,
   Stack,
   Text,
   Title,
 } from "@mantine/core";
 import { CiLineHeight } from "react-icons/ci";
 import { RiWeightLine } from "react-icons/ri";
+import { useParams } from "react-router";
+import { useSinglePokemonQuery } from "../../services/pokemon.queries";
+import ErrorCard from "../error-card";
 
-interface PokemonDetailsCardProps {
-  pokemon: PokemonDetails;
-}
+export default function PokemonDetailsCard() {
+  const { id } = useParams();
 
-export default function PokemonDetailsCard({
-  pokemon,
-}: PokemonDetailsCardProps) {
+  const {
+    data: pokemon,
+    isLoading,
+    error,
+    refetch,
+  } = useSinglePokemonQuery(Number(id));
+
+  if (isLoading || !pokemon) {
+    return <Skeleton height={420} radius="md" />;
+  }
+
+  if (error) {
+    return <ErrorCard error={error} refetch={refetch} />;
+  }
+
   const artworkSrc =
     pokemon.sprites.other?.["official-artwork"]?.front_default ??
     pokemon.sprites.front_default;

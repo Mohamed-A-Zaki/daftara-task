@@ -1,14 +1,9 @@
+import type { RefetchFunction } from "@/modules/pokemons/types";
 import { Button } from "@mantine/core";
-import type {
-  QueryObserverResult,
-  RefetchOptions,
-} from "@tanstack/react-query";
 import { FaBoxOpen } from "react-icons/fa6";
 
 interface EmptyCardProps {
-  refetch: (
-    options?: RefetchOptions | undefined,
-  ) => Promise<QueryObserverResult>;
+  refetch: RefetchFunction;
 }
 
 export default function EmptyCard({ refetch }: EmptyCardProps) {
