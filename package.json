@@ -1,5 +1,6 @@
 {
   "name": "pokemon-app",
+  "homepage": "https://Mohamed-A-Zaki.github.io/daftara-task/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,7 +13,9 @@
     "format": "prettier . --write",
     "prepare": "husky",
     "update": "ncu -u",
-    "serve": "npx serve -s dist"
+    "serve": "npx serve -s dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fontsource/roboto": "^5.2.10",
@@ -25,6 +28,7 @@
     "@tanstack/react-query": "^5.101.1",
     "@tanstack/react-query-devtools": "^5.101.1",
     "axios": "^1.18.1",
+    "gh-pages": "^6.3.0",
     "npm-check-updates": "^22.2.7",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
