@@ -10,6 +10,5 @@ import "@fontsource/roboto/800.css";
 import "@fontsource/roboto/900.css";
 
 import "@mantine/core/styles.css";
-import "@mantine/notifications/styles.css";
 
 import "./styles.css";
