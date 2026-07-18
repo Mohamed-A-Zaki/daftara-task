@@ -1,7 +1,10 @@
+import {
+  getPokemon,
+  getPokemons,
+} from "@/modules/pokemons/services/pokemon.api";
+import { pokemonsKeys } from "@/modules/pokemons/services/pokemons.keys";
+import type { PokemonFilters } from "@/modules/pokemons/types";
 import { useQuery } from "@tanstack/react-query";
-import type { PokemonFilters } from "../types";
-import { getPokemon, getPokemons } from "./pokemon.api";
-import { pokemonsKeys } from "./pokemons.keys";
 
 /***
  * Hook to fetch all pokemons with optional filters

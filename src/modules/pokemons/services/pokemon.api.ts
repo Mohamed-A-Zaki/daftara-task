@@ -1,10 +1,10 @@
-import { apiRoutes } from "@/shared/api/api-routes";
-import { endpoint } from "@/shared/api/endpoint";
 import type {
   GetPokemonsResponse,
   GetSinglePokemonResponse,
   PokemonFilters,
-} from "../types";
+} from "@/modules/pokemons/types";
+import { apiRoutes } from "@/shared/api/api-routes";
+import { endpoint } from "@/shared/api/endpoint";
 
 /**
  * Fetches a list of pokemons from the API with optional filters.

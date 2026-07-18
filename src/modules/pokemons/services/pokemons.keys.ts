@@ -1,4 +1,4 @@
-import type { PokemonFilters } from "../types";
+import type { PokemonFilters } from "@/modules/pokemons/types";
 
 export const pokemonsKeys = {
   /**

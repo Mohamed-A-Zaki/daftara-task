@@ -4,12 +4,11 @@ import type {
   RefetchOptions,
 } from "@tanstack/react-query";
 import { FaBoxOpen } from "react-icons/fa6";
-import type { GetPokemonsResponse } from "../types";
 
 interface EmptyCardProps {
   refetch: (
     options?: RefetchOptions | undefined,
-  ) => Promise<QueryObserverResult<NoInfer<GetPokemonsResponse>, Error>>;
+  ) => Promise<QueryObserverResult>;
 }
 
 export default function EmptyCard({ refetch }: EmptyCardProps) {

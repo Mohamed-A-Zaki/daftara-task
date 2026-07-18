@@ -1,7 +1,7 @@
-import { LIMIT } from "@/shared/configurations/constants";
+import { useAllPokemonsQuery } from "@/modules/pokemons/services/pokemon.queries";
+import type { Pokemon } from "@/modules/pokemons/types";
+import { LIMIT } from "@/modules/pokemons/utils/constants";
 import { useEffect, useRef, useState } from "react";
-import { useAllPokemonsQuery } from "../services/pokemon.queries";
-import type { Pokemon } from "../types";
 
 export default function useInfiniteScrollTab() {
   const [offset, setOffset] = useState(0);

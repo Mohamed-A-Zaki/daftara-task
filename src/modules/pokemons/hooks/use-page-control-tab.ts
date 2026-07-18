@@ -1,6 +1,6 @@
-import { LIMIT } from "@/shared/configurations/constants";
+import { useAllPokemonsQuery } from "@/modules/pokemons/services/pokemon.queries";
+import { LIMIT } from "@/modules/pokemons/utils/constants";
 import { useState } from "react";
-import { useAllPokemonsQuery } from "../services/pokemon.queries";
 
 export default function usePageControlTab() {
   const [activePage, setActivePage] = useState(1);
@@ -20,6 +20,6 @@ export default function usePageControlTab() {
     activePage,
     totalPages,
     refetch,
-    data
+    data,
   };
 }

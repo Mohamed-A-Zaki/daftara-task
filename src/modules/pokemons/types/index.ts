@@ -38,7 +38,6 @@ export interface GetSinglePokemonResponse {
     is_hidden: boolean;
     slot: number;
   }[];
-
   stats: {
     base_stat: number;
     effort: number;
@@ -48,6 +47,8 @@ export interface GetSinglePokemonResponse {
     };
   }[];
 }
+
+export type PokemonDetails = GetSinglePokemonResponse;
 
 export interface Pokemon {
   name: string;

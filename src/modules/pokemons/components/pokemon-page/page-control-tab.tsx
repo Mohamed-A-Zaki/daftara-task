@@ -1,9 +1,9 @@
+import EmptyCard from "@/modules/pokemons/components/empty-card";
+import ErrorCard from "@/modules/pokemons/components/error-card";
+import PokemonCard from "@/modules/pokemons/components/pokemon-page/pokemon-card";
+import PokemonListSkeleton from "@/modules/pokemons/components/pokemon-page/pokemon-list-skeleton";
+import usePageControlTab from "@/modules/pokemons/hooks/use-page-control-tab";
 import { Pagination } from "@mantine/core";
-import usePageControlTab from "../hooks/use-page-control-tab";
-import EmptyCard from "./empty-card";
-import ErrorCard from "./error-card";
-import PokemonCard from "./pokemon-card";
-import PokemonListSkeleton from "./pokemon-list-skeleton";
 
 export default function PageControlTab() {
   const {

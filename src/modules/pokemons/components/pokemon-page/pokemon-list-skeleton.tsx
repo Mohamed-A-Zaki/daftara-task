@@ -1,4 +1,4 @@
-import { LIMIT } from "@/shared/configurations/constants";
+import { LIMIT } from "@/modules/pokemons/utils/constants";
 import { Card, Skeleton } from "@mantine/core";
 
 export default function PokemonListSkeleton() {
